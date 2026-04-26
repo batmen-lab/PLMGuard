@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19795993.svg)](https://doi.org/10.5281/zenodo.19795993)
 # PLMGuard
 
 PLMGuard is a diagnostic framework for protein sequence search that probes whether similarity scores are biologically meaningful, semantically coherent, and resistant to manipulation. It helps distinguish trustworthy search signals from opaque embedding-based similarity across six complementary experiments.
@@ -28,9 +29,7 @@ PLMGuard/
 └── src/                                  # Source code (this repository)
 ```
 
-- **Sequence database** — [LINK]
-- **Library dependencies (PLM methods)** — [LINK]
-- **Rosetta-mutated structures** (required for Experiment 2) — [LINK]
+- **Reference databses**, **Library dependencies (PLM methods)**, **Rosetta-mutated structures** — [download from zenodo](https://doi.org/10.5281/zenodo.19795993)
 - **PDB structures** - [pdbstyle-2.08](https://scop.berkeley.edu/downloads/pdbstyle/pdbstyle-sel-gs-bib-40-2.08.tgz)
 
 #### 2. Configure environment paths
