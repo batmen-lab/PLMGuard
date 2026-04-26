@@ -2,7 +2,7 @@
 
 PLMGuard is a diagnostic framework for protein sequence search that probes whether similarity scores are biologically meaningful, semantically coherent, and resistant to manipulation. It helps distinguish trustworthy search signals from opaque embedding-based similarity across six complementary experiments.
 
-![Overview](figs/fig_overview.png)
+![Overview](figs/fig_overview.jpg)
 
 
 ---
