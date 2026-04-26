@@ -1,0 +1,16 @@
+# Core dependencies for sanity_check/ and utils/ scripts
+biopython==1.85
+numpy==2.3.1
+pandas==2.3.0
+matplotlib==3.10.3
+seaborn==0.13.2
+scikit-learn==1.7.0
+tqdm==4.67.1
+
+# Optional: required only for Experiment 1 FASTA generation (fasta_utils.py --type mutant)
+# Install via: pip install pyvolve
+# pyvolve
+
+# Optional: required only for Experiment 2 structure analysis (run_mut_rosetta.py, filter_mut_rosetta.py)
+# PyRosetta requires a separate license-gated wheel; see https://www.pyrosetta.org/downloads
+# pyrosetta==2025.33+release.a492b89a9e

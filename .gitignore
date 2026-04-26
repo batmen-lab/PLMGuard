@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Environments
+.env
+.venv/
+env/
+
+# Data — large files and generated databases
+data/db/*.fa
+data/db/*.tsv
+data/db/tmp/
+data/db/db_*/
+data/db/astral_pdb/
+data/rosetta_mut/
+data/temp/
+
+# Parsed search results (downloadable from HuggingFace)
+data/parsed_result/
+
+# Output figures and metrics (auto-generated)
+results/
+
+# Third-party libraries
+libs/
+
+# Compiled binaries
+libs/TMscore
+libs/TMscore.cpp
+
+# Archives
+*.tar.gz
+*.zip
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Backup files
+*_backup*
