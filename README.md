@@ -23,29 +23,19 @@ PLMGuard/
 │   │   ├── astral.fa                     # ASTRAL sequence database
 │   │   └── astral_pdb/                   # ASTRAL PDB structures
 │   │       └── astral40/pdbstyle-2.08/
+│   ├── parsed_result/                    # Parsed search results 
 │   └── rosetta_mut/                      # Rosetta-relaxed mutant PDB structures (Exp. 2)
 ├── libs/                                 # Third-party tool source code
 ├── results/                              # Output figures and metrics (auto-created)
 └── src/                                  # Source code (this repository)
 ```
 
-- **Reference databses**, **Library dependencies (PLM methods)**, **Rosetta-mutated structures** — [download from zenodo](https://doi.org/10.5281/zenodo.19795993)
-- **PDB structures** - [pdbstyle-2.08](https://scop.berkeley.edu/downloads/pdbstyle/pdbstyle-sel-gs-bib-40-2.08.tgz)
+- **Reference databses**, **Library dependencies (PLM methods)**, **Rosetta-mutated structures** — download from [zenodo](https://doi.org/10.5281/zenodo.19795993)
+- **PDB structures** - download from [pdbstyle-2.08](https://scop.berkeley.edu/downloads/pdbstyle/pdbstyle-sel-gs-bib-40-2.08.tgz)
+- **Parsed search results** - see *Reproduce Figures from the Paper* section
 
-#### 2. Configure environment paths
 
-Edit `src/PLMs_cmds/.env` and set `BASE_DIR` to your PLMGuard root:
-
-```bash
-# src/PLMs_cmds/.env
-export BASE_DIR="/path/to/PLMGuard"   # <-- update this line
-export DATA_DIR="$BASE_DIR/data"
-export TEMP_DIR="$DATA_DIR/temp"
-```
-
-The remaining variables in `.env` (Python paths, GPU assignments, library paths) should be updated to match your installation of each tool.
-
-#### 3. Set up conda environments
+#### 2. Set up conda environments
 
 Create the base evaluation environment:
 
@@ -64,9 +54,25 @@ wget https://zhanggroup.org/TM-score/TMscore.cpp -O libs/TMscore.cpp
 g++ -static -O3 -ffast-math -lm -o libs/TMscore libs/TMscore.cpp
 ```
 
+> Steps 3 and 4 are only required for running the protein similarity search methods. If you do not intend to use these methods, you may safely skip these steps.
+
+#### 3. Configure environment paths
+
+Edit `src/PLMs_cmds/.env` and set `BASE_DIR` to your PLMGuard root:
+
+```bash
+# src/PLMs_cmds/.env
+export BASE_DIR="/path/to/PLMGuard"   # <-- update this line
+export DATA_DIR="$BASE_DIR/data"
+export TEMP_DIR="$DATA_DIR/temp"
+```
+
+The remaining variables in `.env` (Python paths, GPU assignments, library paths) should be updated to match your installation of each tool.
+
+
 #### 4. Set up search methods
 
-**PLM-based methods** — download our modified versions [LINK], place in `libs/`, and follow the per-tool environment setup:
+**PLM-based methods** — download our modified versions from [zenodo](https://doi.org/10.5281/zenodo.19795993), place in `libs/`, and follow the per-tool environment setup:
 
 | Method | Environment variable |
 |---|---|
@@ -86,7 +92,7 @@ g++ -static -O3 -ffast-math -lm -o libs/TMscore libs/TMscore.cpp
 
 ---
 
-## Reproduce figures in the paper
+## Reproduce Figures from the Paper
 
 Since running all search methods is time-consuming, we provide precomputed parsed search results so you can reproduce all figures directly.
 
