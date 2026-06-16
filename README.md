@@ -40,7 +40,7 @@ PLMGuard/
 Create the base evaluation environment:
 
 ```bash
-conda create -n PLMGuard python=3.10
+conda create -n PLMGuard python=3.11
 conda activate PLMGuard
 pip install -r requirements.txt
 ```
