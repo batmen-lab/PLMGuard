@@ -81,6 +81,15 @@ The remaining variables in `.env` (Python paths, GPU assignments, library paths)
 | PLMSearch | `PLMSEARCH_PYTHON_PATH`, `PLMSEARCH_SRC_DIR` |
 | TM-Vec | `TMVEC_PYTHON_PATH`, `TMVEC_SRC_DIR` |
 
+**Alignment + Embedding search method**
+
+NEAR: 
+ - Download our modified version from [Google Drive](https://drive.google.com/file/d/1Gdb0usMAnOneZLsMgCTSs7UI6hOhNnBp/view?usp=drive_link), or download the original version from the [repo](https://github.com/TravisWheelerLab/NEAR), and lowered the `min_seq_length` parameter in `near_embed.py` to `5`.
+
+ - Place the NEAR files under `libs/`, then set `NEAR_PYTHON_PATH` and `NEAR_SRC_DIR` accordingly.
+
+
+
 **Alignment-based methods** — install from official sources at the versions used in the paper:
 
 | Method | Version | Source |
@@ -88,7 +97,7 @@ The remaining variables in `.env` (Python paths, GPU assignments, library paths)
 | BLASTp | 2.17.0 | https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/ |
 | MMseqs2 | 18.8cc5cs | https://github.com/soedinglab/MMseqs2 |
 | Diamond | 2.1.14 | https://github.com/bbuchfink/diamond |
-| NEAR | — | https://github.com/TravisWheelerLab/NEAR |
+
 
 ---
 
